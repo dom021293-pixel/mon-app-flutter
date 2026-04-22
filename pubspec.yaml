@@ -1,0 +1,106 @@
+name: joe
+description: "Prière à Saint Joseph"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  share_plus: ^12.0.1
+  audioplayers: ^6.6.0
+  shared_preferences: ^2.5.4
+  url_launcher: ^6.3.2
+  flutter_local_notifications: ^20.1.0
+  timezone: ^0.10.1
+  intl: ^0.20.2
+  file_picker: ^10.3.10
+  cloud_firestore: ^6.1.3
+  firebase_core: ^4.5.0
+  supabase_flutter: ^2.12.0
+  connectivity_plus: ^7.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.7
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/joseph.jpg
+    - images/josephetjesus.jpg
+    - images/st_joseph_paris.jpg
+    - images/oratoire_montreal.jpg
+    - images/basilique_grenoble.jpg
+    - images/nazouma.jpg
+    - images/noces.jpg
+    - images/trinité.jpg
+    - images/mort.jpg
+    - images/vitrailles.jpg
+    - images/novgorod.jpg
+    - images/cretois.jpg
+    - images/tenant.jpg
+    - images/chapentierlatour.jpg
+    - images/repos.jpg
+    - images/famille.jpg
+    - images/giotto.jpg
+    - images/desalle.jpg
+    - images/andre.jpg
+    - images/avila.jpg
+    - images/basile.jpg
+    - images/chrysostome.jpg
+    - images/clairevaux.jpg
+    - images/claude.jpg
+    - images/damascene.jpg
+    - images/eymard.jpg
+    - images/jeanpaul.jpg
+    - images/lisieux.jpg
+    - images/maria.jpg
+    - images/olier.jpg
+    - images/maurice.jpg
+    - images/songe.jpg
+    - images/adoration.jpg
+    - audio/je_vous_salue_marie.aac
+    - audio/je_vous_salue_joseph.aac
+    - audio/gloire_au_pere.aac
+    - audio/notre_pere.aac
+    - audio/je_crois_en_dieu.aac
+
+ # fonts:
+ #   - family: Merriweather
+ #     fonts:
+ #       - asset: assets/fonts/Merriweather-Regular.ttf
+ #       - asset: assets/fonts/Merriweather-Bold.ttf
+ #        weight: 700
+ #      - asset: assets/fonts/Merriweather-Italic.ttf
+ #         style: italic
+
+# ============================================
+# CONFIGURATION DES ICÔNES DE L'APPLICATION
+# ============================================
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "images/joe.png"
+  adaptive_icon_background: "#8B4513"
+  adaptive_icon_foreground: "images/joe.png"
+  remove_alpha_ios: true
+
+# ============================================
+# CONFIGURATION DE L'ÉCRAN DE DÉMARRAGE
+# ============================================
+flutter_native_splash:
+  color: "#8B4513"
+  image: "images/joe.png"
+  android: true
+  ios: true
+  android_gravity: center
+  ios_content_mode: center
+  fullscreen: true
