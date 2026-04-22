@@ -22,17 +22,29 @@ jobs:
       - name: Install Flutter
         run: |
           git clone https://github.com/flutter/flutter.git --depth 1 -b stable
-          echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
+      
+      - name: Add Flutter to PATH
+        run: echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
+      
+      - name: Run flutter doctor
+        run: |
+          export PATH="$PATH:$GITHUB_WORKSPACE/flutter/bin"
           flutter doctor
       
       - name: Enable web
-        run: flutter config --enable-web
+        run: |
+          export PATH="$PATH:$GITHUB_WORKSPACE/flutter/bin"
+          flutter config --enable-web
       
       - name: Install dependencies
-        run: flutter pub get
+        run: |
+          export PATH="$PATH:$GITHUB_WORKSPACE/flutter/bin"
+          flutter pub get
       
       - name: Build web
-        run: flutter build web --release
+        run: |
+          export PATH="$PATH:$GITHUB_WORKSPACE/flutter/bin"
+          flutter build web --release
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
